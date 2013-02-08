@@ -1,23 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
+
 <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="css/style.css">
-    <link href="images/favicon.ico" rel="shortcut icon">
-    <title>First Blog</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<title>Dediced Blog</title>
 </head>
+
 <body>
-<div class="container">
-    <h1>First Blog</h1>
-    <hr />
+
+<!-- START: Facebook Javascript SDK box -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- END: Facebook Javascript SDK box -->
+
+<!-- START: Facebook Like box -->       
+<div class="fb-like-box" data-href="https://www.facebook.com/dediced" data-width="240" data-height="210" data-show-faces="true" data-stream="false" data-header="false"></div>
+<!-- END: Facebook Like box -->
+
+
+<div id="post">
     {% for eachPost in post %}
-        <div class="post">
-        <h2>{{ eachPost.title }}</h2>
-        <h3>Posted on {{ eachPost.timestamp }} by {{ eachPost.author }}</h3>
-        <p>{{ eachPost.bodytext }}</p>
-        </div>
+        <div class="post_title">{{ eachPost.title }}</div>
+        <div class="content">Posted on {{ eachPost.timestamp }} by {{ eachPost.author }}</div>
+        <br><div class="content">{{ eachPost.bodytext }}</div>
         <hr />
     {% endfor %}
 </div>
+
+	<div id="leftbar">
+		<div class="banner">
+			<a href = "http://blog.dediced.com"><img border="0" src="images/blog_banner.png" alt="Dediced Blog" width="250" height="100"></a>
+		</div></br>
+			<ul>
+			<li class="leftbar_title">Related Posts</li><br>
+			<li><a class= "related_posts" style="text-decoration:none" href="#">The Emotional Being</a></li>
+			<li><a class= "related_posts" style="text-decoration:none" href="#">The Culture of the Valley</a></li>
+			<!-- <br><br><li class="leftbar_title">Share</li> -->
+			<br><br><li><div class="fb-like" data-send="true" data-layout="box_count" data-width="450" data-show-faces="false"></div></li>
+			<br><br><li class="leftbar_title">Areas</li><br>
+			<li><a class= "areas" style="text-decoration:none" href="#">Design</a></li>
+			</ul>
+	</div>
+	<div id="rightbar">
+	</div>
+	
+	<div id="navigation">
+		<div class="visit">
+			<a href="http://dediced.com">>> Visit Us</a>
+		</div>
+		<div class="menu">
+			<a href="#">Mission</a>
+			<a href="#">Startup Chronicles</a>
+			<a href="#">About Us</a>
+			<a href="#">Contact</a>
+		</div>
+		<div class="search">
+			<form action="/search" id="searchform" method="get">
+			<table style="width: 100%px;">
+			<tbody>
+				<tr>
+				<td><input class="sbox" id="sbox" name="q" onblur="if(this.value=='') this.value='Search this blog';" 
+				onfocus="if(this.value=='Search this blog') this.value='';" size="25" style="padding: 2px; width: 98%;" 
+				this.value="this.defaultValue;" type="text" value="Search this blog" /></td>
+				<td width="50px"><input alt="" class="sbutton" id="sbutton" type="button" value=" Go " /></td>
+				</tr>
+			</tbody></table>
+			<br /></form>
+		</div>
+	</div>
+	
+
+	<div id="post">
+		<div class="post_title">
+			There is No Dumb User, Just Bad Design
+		</div></br></br>
+		<div class="picture">
+			<img border="0" src="images/Einstein_Genius_Quote.jpeg" alt="Einstein Genius" width="480" height="360">
+		</div></br>
+		<div class="content">
+			<h3>Ego, the Destroyer of All Things</h3>
+
+			To first understand good design, we have to understand human nature. There 
+			is this intrinsic nature of a person to see the world from his own lenses and 
+			form a worldview based on his own prejudices and experiences. This is not 
+			bad after all, because this is basically the way we were designed for survival. 
+			The problem comes when this attitude isolates that person's perspective and 
+			ultimately affects his actions. Humans have a tendency of being egotistical: 
+			to think that we are the center of the universe and everything revolves around 
+			us. Add stubbornness (another quality of human nature) and see where this 
+			leads. Pride and ego are probably the main causes of so much pain and 
+			suffering in the world (wars, greed, etc).<br> 
+			<b>Ego is not only dangerous, it is fatal.</b><br><br>
+			
+			How does this connect with design? I will dub this the creator bias: a creator's tendency to love his creation and when taken to an extreme, the creator can oversee its flaws, leading to blind love and dishonesty. There is nothing wrong with loving what you created, but it is when this behavior produces too much pride and ego, that will lead you to crush everything that goes against your belief system.
+			<br><br>To give you a better idea of what I am heading to, there is a legendary video on Coursera's human computer interaction class from Stanford about two people testing out a printing machine during a Xerox experiment. The video shows you two users having trouble using the machine. The legend has it that the executives judged those users to be 'dumb', that they did not know what they were doing. It turned out that those two 'dumb' users were Alan Newland and Ron Caplan, two of Xeros's premier research scientists and giants of computer science research.
+			<br><br>Apply this to today's technologies and you will see why Apple is so successful. They understood how design and experience were directly intertwined and thus developed their technology to be as intuitive as possible so that users had no option of being 'dumb'- even 5 year olds and 90 year old grandmas know how to use an iPad on their first attempt.
+			<br><br>If you think 5-year olds or 90-year olds are 'dumb', you are probably filled with ego, the root of all evil. So next time you see a developer putting down other people calling them 'dumb' because they 'don't get' his creation, you know what the problem is.
+			<br><br>
+			
+<!-- START: Livefyre Embed -->
+<div id="livefyre-comments"></div>
+<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+<script type="text/javascript">
+(function () {
+    var articleId = fyre.conv.load.makeArticleId(null);
+    fyre.conv.load({}, [{
+        el: 'livefyre-comments',
+        network: "livefyre.com",
+        siteId: "322957",
+        articleId: articleId,
+        signed: false,
+        collectionMeta: {
+            articleId: articleId,
+            url: fyre.conv.load.makeCollectionUrl(),
+        }
+    }], function() {});
+}());
+</script>
+<!-- END: Livefyre Embed -->
+			
+		</div>
+	</div>
+
 </body>
 </html>
