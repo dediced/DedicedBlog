@@ -12,9 +12,3 @@ def home(request):
 #    }
 #    return render_to_response('index.html', content)
     return render_to_response('index.html', {'post' : entries})
-	
-return render_to_response('index.html', {
-    'index': index,
-    'posts': Post.objects.filter(index=index)[:5]
-},
-context_instance=RequestContext(request))
