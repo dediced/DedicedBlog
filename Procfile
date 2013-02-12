@@ -1,1 +1,2 @@
-web: python DedicedBlog/manage.py collectstatic --noinput; bin/gunicorn_django --workers=4 --bind=0.0.0.0:$PORT DedicedBlog/hellodjango/settings.py 
+web: gunicorn hellodjango.wsgi
+
