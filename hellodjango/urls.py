@@ -17,4 +17,6 @@ urlpatterns = patterns('',
 )
 
 # added from: http://www.webapplog.com/deployment-of-static-files-to-heroku/
-urlpatterns += patterns(”, (r’^static/(?P.*)$’, ‘django.views.static.serve’, {‘document_root’: settings.STATIC_ROOT}),)
+urlpatterns += patterns(”,
+(r’^static/(?P.*)$’, ‘django.views.static.serve’, {‘document_root’: settings.STATIC_ROOT}),
+)
