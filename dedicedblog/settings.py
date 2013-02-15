@@ -1,5 +1,8 @@
-# Django settings for hellodjango project.
+# Django settings for dedicedblog project.
+
 import os
+
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -98,16 +101,17 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'hellodjango.urls'
+ROOT_URLCONF = 'dedicedblog.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'hellodjango.wsgi.application'
+WSGI_APPLICATION = 'dedicedblog.wsgi.application'
 
 TEMPLATE_DIRS = (
-    "blog/templates",
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    PROJECT_PATH + '/templates/',
+    PROJECT_PATH + '/../blog/templates',
 )
 
 INSTALLED_APPS = (
@@ -117,11 +121,11 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
-    'django.contrib.admindocs',
+    # 'django.contrib.admindocs',
+    'blog',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -153,6 +157,6 @@ LOGGING = {
     }
 }
 
-# Parse database configuration from $DATABASE_URL
+# Parse the values of the DATABASE_URL environment variable and convert them to something Django can understand.
 import dj_database_url
 DATABASES['default'] =  dj_database_url.config()

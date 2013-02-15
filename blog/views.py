@@ -1,16 +1,6 @@
-# Create your views here.
 from django.shortcuts import render_to_response
-from blog.models import post
-#added
-from django.template import RequestContext
+from blog.models import Post
 
 def home(request):
-    entries = post.objects.all()[:10]
-#    content = {
-#        'title' : 'My First Post',
-#        'author' : 'Thung Han',
-#        'date' : '28th January 2013',
-#        'body' : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus tempus dui, ut vulputate nisl eleifend eget. Aenean justo felis, dapibus quis vulputate at, porta et dolor. Praesent enim libero, malesuada nec vestibulum vitae, fermentum nec ligula. Etiam eget convallis turpis. Donec non sem justo.',
-#    }
-#    return render_to_response('index.html', content)
-    return render_to_response('index.html', {'post' : entries}, context_instance=RequestContext(request))
+    post_list = Post.objects.all().order_by('-timestamp')[:10]
+    return render_to_response('posts.html', {'post' : post_list})
