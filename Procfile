@@ -1,1 +1,1 @@
-web: gunicorn hellodjango.wsgi
+web: python manage.py collectstatic --noinput; gunicorn dedicedblog.wsgi
