@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="images/favicon.ico" rel="shortcut icon">
+    <title>First Blog</title>
+</head>
+<body>
+<div class="container">
+    <h1>First Blog</h1>
+    <hr />
+    {% for eachPost in post %}
+        <div class="post">
+        <h2>{{ eachPost.title }}</h2>
+        <h3>Posted on {{ eachPost.timestamp }} by {{ eachPost.author }}</h3>
+        <p>{{ eachPost.bodytext }}</p>
+        </div>
+        <hr />
+    {% endfor %}
+</div>
+</body>
+</html>
