@@ -8,6 +8,7 @@
 
 <body>
 
+<div id="rightbar">
 <!-- START: Facebook Javascript SDK box -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
@@ -18,12 +19,13 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <!-- END: Facebook Javascript SDK box -->
+</div>
 
 <!-- START: Facebook Like box -->       
 <div class="fb-like-box" data-href="https://www.facebook.com/dediced" data-width="240" data-height="210" data-show-faces="true" data-stream="false" data-header="false"></div>
 <!-- END: Facebook Like box -->
 
-
+<br><br><br>
 <div id="post">
     {% for eachPost in post %}
         <div class="post_title">{{ eachPost.title }}</div>
@@ -47,18 +49,20 @@
 			<li><a class= "areas" style="text-decoration:none" href="#">Design</a></li>
 			</ul>
 	</div>
-	<div id="rightbar">
+
+	
+	<div id="topbar">
 	</div>
 	
 	<div id="navigation">
 		<div class="visit">
-			<a href="http://dediced.com">>> Visit Us</a>
+			<a href="http://dediced.com" target="_blank">>> Visit Us</a>
 		</div>
 		<div class="menu">
-			<a href="#">Mission</a>
-			<a href="#">Startup Chronicles</a>
-			<a href="#">About Us</a>
-			<a href="#">Contact</a>
+			<a href="http://www.marcoshung.com/Dediced_New_Blog/mission.html">Mission</a>
+			<a href="http://www.marcoshung.com/Dediced_New_Blog/startup_chronicles.html">Startup Chronicles</a>
+			<a href="http://www.marcoshung.com/Dediced_New_Blog/about_us.html">About Us</a>
+			<a href="http://www.marcoshung.com/Dediced_New_Blog/contact.html">Contact</a>
 		</div>
 		<div class="search">
 			<form action="/search" id="searchform" method="get">
@@ -102,28 +106,39 @@
 			<br><br>To give you a better idea of what I am heading to, there is a legendary video on Coursera's human computer interaction class from Stanford about two people testing out a printing machine during a Xerox experiment. The video shows you two users having trouble using the machine. The legend has it that the executives judged those users to be 'dumb', that they did not know what they were doing. It turned out that those two 'dumb' users were Alan Newland and Ron Caplan, two of Xeros's premier research scientists and giants of computer science research.
 			<br><br>Apply this to today's technologies and you will see why Apple is so successful. They understood how design and experience were directly intertwined and thus developed their technology to be as intuitive as possible so that users had no option of being 'dumb'- even 5 year olds and 90 year old grandmas know how to use an iPad on their first attempt.
 			<br><br>If you think 5-year olds or 90-year olds are 'dumb', you are probably filled with ego, the root of all evil. So next time you see a developer putting down other people calling them 'dumb' because they 'don't get' his creation, you know what the problem is.
-			<br><br>
+			<br><br><br>
 			
-<!-- START: Livefyre Embed -->
-<div id="livefyre-comments"></div>
-<script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
-<script type="text/javascript">
-(function () {
-    var articleId = fyre.conv.load.makeArticleId(null);
-    fyre.conv.load({}, [{
-        el: 'livefyre-comments',
-        network: "livefyre.com",
-        siteId: "322957",
-        articleId: articleId,
-        signed: false,
-        collectionMeta: {
-            articleId: articleId,
-            url: fyre.conv.load.makeCollectionUrl(),
-        }
-    }], function() {});
-}());
-</script>
-<!-- END: Livefyre Embed -->
+	<!-- START: DISQUS Embed -->
+	<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'dedicedblog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    <!-- END: DISQUS Embed -->
+	<!-- START: DISQUS Comment Count Embed -->
+	<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'dedicedblog'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+    </script>
+    <!-- END: DISQUS Comment Count Embed -->
+		
 			
 		</div>
 	</div>

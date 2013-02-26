@@ -56,16 +56,24 @@ body{
 	color: grey;
 }
 
-/*#rightbar {
+/*#topbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 85px;
+	background-color: white;
+}*/
+
+#rightbar {
 	position: fixed;
 	top: 0;
 	height: 100%;
 	width: 9cm;
 	background-color: white;
-	border-left: solid #DCDCDC;
-	border-width:1px;
+	/*border-left: solid #DCDCDC;
+	border-width:1px;*/
 	margin-left:75%;
-}*/
+}
 
 #leftbar {
 	position: fixed;
@@ -120,12 +128,13 @@ body{
 
 #post {
     width:960px; /*	makes sure post stays in place when browser resized */
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 #post .post_title {
 	color: #21B9FF;
 	font-size: 32px;
-	margin-top: 85px;
 	margin-left: 10cm;
 }
 
@@ -137,7 +146,7 @@ body{
 #post .content {
 	font-size: 14px;
 	margin-left: 10cm;
-	/*margin-right: 10cm;*/
+	margin-bottom: 1cm;
 }
 
 .fb-like-box {
