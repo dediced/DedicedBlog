@@ -30,7 +30,7 @@
     {% for eachPost in post %}
         <div class="post_title">{{ eachPost.title }}</div>
         <div class="content">Posted on {{ eachPost.timestamp }} by {{ eachPost.author }}</div>
-        <br><div class="content">{{ eachPost.bodytext }}</div>
+        <br><div class="content">{{ eachPost.bodytext|safe }}</div>
         <hr />
     {% endfor %}
 </div>
